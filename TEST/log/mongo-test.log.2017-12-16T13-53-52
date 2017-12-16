@@ -1,0 +1,15 @@
+2017-12-16T19:23:14.096+0530 I CONTROL  [conn1] pid=6832 port=27017 64-bit host=DESKTOP-NGF4S4Q
+2017-12-16T19:23:14.097+0530 I CONTROL  [conn1] db version v3.6.0
+2017-12-16T19:23:14.097+0530 I CONTROL  [conn1] git version: a57d8e71e6998a2d0afde7edc11bd23e5661c915
+2017-12-16T19:23:14.097+0530 I CONTROL  [conn1] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-16T19:23:14.097+0530 I CONTROL  [conn1] allocator: tcmalloc
+2017-12-16T19:23:14.098+0530 I CONTROL  [conn1] modules: none
+2017-12-16T19:23:14.098+0530 I CONTROL  [conn1] build environment:
+2017-12-16T19:23:14.098+0530 I CONTROL  [conn1]     distmod: 2008plus-ssl
+2017-12-16T19:23:14.098+0530 I CONTROL  [conn1]     distarch: x86_64
+2017-12-16T19:23:14.098+0530 I CONTROL  [conn1]     target_arch: x86_64
+2017-12-16T19:23:14.099+0530 I CONTROL  [conn1] options: { config: "D:\dev\MongoDB\mongod.conf", service: true, storage: { dbPath: "D:\dev\MongoDB\TEST\db" }, systemLog: { destination: "file", path: "D:\dev\MongoDB\TEST\log\mongo-test.log" } }
+2017-12-16T19:23:14.101+0530 I NETWORK  [conn1] end connection 127.0.0.1:60963 (0 connections now open)
+2017-12-16T19:23:52.579+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:60964 #2 (1 connection now open)
+2017-12-16T19:23:52.580+0530 I NETWORK  [conn2] received client metadata from 127.0.0.1:60964 conn: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.0" }, os: { type: "Windows", name: "Microsoft Windows 10", architecture: "x86_64", version: "10.0 (build 10586)" } }
+2017-12-16T19:23:52.583+0530 I CONTROL  [conn2] Log rotation initiated

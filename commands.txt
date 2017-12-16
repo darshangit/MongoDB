@@ -25,3 +25,19 @@ To Save records:
  ReplSet help:
  rs.help()
  Then check status etc
+ 
+ Set rotational Logging(only possible through admin db ):
+ mongo localhost/admin --eval "db.runCommand({logRotate:1})"
+ 
+ To Remain inside the shell : --shell
+ 
+ To set Ediotr: 
+ set EDITOR="C:/path to exe"
+ mongo
+ edit function_name
+ 
+ To set default values like dropDb.ts(every time it will load suring script run):
+ put the script on .mongorc: C:\Users\Yourusername\.mongorc
+ 
+ to disable rc:
+ mongo --norc
