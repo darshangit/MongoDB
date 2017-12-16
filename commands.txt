@@ -1,0 +1,27 @@
+mongod -f D:\dev\MongoDB\mongod.conf --install : To Install as a service(Run CMD as admin)
+
+mongo : Opens shell
+		db: shows dbs
+		use anydbname: will use that db
+		
+mongo --port 30000 : to connect a speicifc db
+db.getMongo() : shows the current db server connected to.
+
+mongod --help : shows list of commands
+
+To Create a replica set:
+var demoConfig={ _id: "demo", members: [{ _id: 0, host: 'localhost:30000', priority: 10}, { _id: 1, host: 'localhost:40000' }, { _id: 2, host: 'localhost:50000', arbiterOnly: true}] };
+rs.initiate(demoConfig)	
+
+To Save records:
+ db.foo.save({ _id:1, value:'hello world'})
+ 
+ To View:
+ db.foo.find()
+ 
+ To Set Slave:
+ db.setSlaveOk()
+ 
+ ReplSet help:
+ rs.help()
+ Then check status etc

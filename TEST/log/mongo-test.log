@@ -1,0 +1,57 @@
+2017-12-16T16:26:54.286+0530 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-16T16:26:54.288+0530 I CONTROL  [initandlisten] MongoDB starting : pid=7544 port=27017 dbpath=D:\dev\MongoDB\TEST\db 64-bit host=DESKTOP-NGF4S4Q
+2017-12-16T16:26:54.288+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-16T16:26:54.288+0530 I CONTROL  [initandlisten] db version v3.6.0
+2017-12-16T16:26:54.289+0530 I CONTROL  [initandlisten] git version: a57d8e71e6998a2d0afde7edc11bd23e5661c915
+2017-12-16T16:26:54.289+0530 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-16T16:26:54.289+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-16T16:26:54.289+0530 I CONTROL  [initandlisten] modules: none
+2017-12-16T16:26:54.290+0530 I CONTROL  [initandlisten] build environment:
+2017-12-16T16:26:54.290+0530 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-16T16:26:54.290+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-16T16:26:54.290+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-16T16:26:54.290+0530 I CONTROL  [initandlisten] options: { config: "D:\dev\MongoDB\mongod.conf", service: true, storage: { dbPath: "D:\dev\MongoDB\TEST\db" }, systemLog: { destination: "file", path: "D:\dev\MongoDB\TEST\log\mongo-test.log" } }
+2017-12-16T16:26:54.292+0530 I -        [initandlisten] Detected data files in D:\dev\MongoDB\TEST\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-16T16:26:54.292+0530 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3575M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2017-12-16T16:26:54.670+0530 I STORAGE  [initandlisten] WiredTiger message [1513421814:669011][7544:140709237994592], txn-recover: Main recovery loop: starting at 1/28288
+2017-12-16T16:26:54.897+0530 I STORAGE  [initandlisten] WiredTiger message [1513421814:897119][7544:140709237994592], txn-recover: Recovering log 1 through 2
+2017-12-16T16:26:55.062+0530 I STORAGE  [initandlisten] WiredTiger message [1513421815:62167][7544:140709237994592], txn-recover: Recovering log 2 through 2
+2017-12-16T16:26:55.390+0530 I CONTROL  [initandlisten] 
+2017-12-16T16:26:55.390+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-16T16:26:55.390+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-16T16:26:55.390+0530 I CONTROL  [initandlisten] 
+2017-12-16T16:26:55.391+0530 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2017-12-16T16:26:55.391+0530 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2017-12-16T16:26:55.391+0530 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2017-12-16T16:26:55.391+0530 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2017-12-16T16:26:55.391+0530 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2017-12-16T16:26:55.392+0530 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2017-12-16T16:26:55.392+0530 I CONTROL  [initandlisten] 
+2017-12-16T16:26:55.392+0530 I CONTROL  [initandlisten] 
+2017-12-16T16:26:55.392+0530 I CONTROL  [initandlisten] ** WARNING: The file system cache of this machine is configured to be greater than 40% of the total memory. This can lead to increased memory pressure and poor performance.
+2017-12-16T16:26:55.392+0530 I CONTROL  [initandlisten] See http://dochub.mongodb.org/core/wt-windows-system-file-cache
+2017-12-16T16:26:55.393+0530 I CONTROL  [initandlisten] 
+2017-12-16T16:26:55.632+0530 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'D:/dev/MongoDB/TEST/db/diagnostic.data'
+2017-12-16T16:26:55.634+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2017-12-16T16:26:55.634+0530 I STORAGE  [initandlisten] Service running
+2017-12-16T16:30:47.884+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59882 #1 (1 connection now open)
+2017-12-16T16:30:47.891+0530 I NETWORK  [conn1] received client metadata from 127.0.0.1:59882 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.10586" }, platform: "Node.js v7.4.0, LE, mongodb-core: 2.1.17" }
+2017-12-16T16:30:48.010+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59883 #2 (2 connections now open)
+2017-12-16T16:30:48.048+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59884 #3 (3 connections now open)
+2017-12-16T16:31:33.412+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59894 #4 (4 connections now open)
+2017-12-16T16:31:33.412+0530 I NETWORK  [conn4] received client metadata from 127.0.0.1:59894 conn: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.6.0" }, os: { type: "Windows", name: "Microsoft Windows 10", architecture: "x86_64", version: "10.0 (build 10586)" } }
+2017-12-16T16:33:54.936+0530 I NETWORK  [conn2] end connection 127.0.0.1:59883 (3 connections now open)
+2017-12-16T16:33:54.936+0530 I NETWORK  [conn3] end connection 127.0.0.1:59884 (2 connections now open)
+2017-12-16T16:33:54.937+0530 I NETWORK  [conn1] end connection 127.0.0.1:59882 (1 connection now open)
+2017-12-16T16:33:57.552+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59919 #5 (2 connections now open)
+2017-12-16T16:33:57.553+0530 I NETWORK  [conn5] received client metadata from 127.0.0.1:59919 conn: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Windows_NT", name: "win32", architecture: "x64", version: "10.0.10586" }, platform: "Node.js v7.4.0, LE, mongodb-core: 2.1.17" }
+2017-12-16T16:33:57.587+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59920 #6 (3 connections now open)
+2017-12-16T16:33:57.590+0530 I NETWORK  [listener] connection accepted from 127.0.0.1:59921 #7 (4 connections now open)
+2017-12-16T16:45:26.979+0530 I NETWORK  [conn4] end connection 127.0.0.1:59894 (3 connections now open)
+2017-12-16T16:47:54.300+0530 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2017-12-16T16:47:54.300+0530 I NETWORK  [serviceShutdown] shutdown: going to close listening sockets...
+2017-12-16T16:47:54.301+0530 F CONTROL  [thread8] Encountered an error in PeriodicRunnerASIO: The I/O operation has been aborted because of either a thread exit or an application request.
+2017-12-16T16:47:54.301+0530 I FTDC     [serviceShutdown] Shutting down full-time diagnostic data capture
+2017-12-16T16:47:54.307+0530 I STORAGE  [serviceShutdown] WiredTigerKVEngine shutting down
+2017-12-16T16:47:54.677+0530 I STORAGE  [serviceShutdown] shutdown: removing fs lock...
+2017-12-16T16:47:54.677+0530 I CONTROL  [serviceShutdown] now exiting
