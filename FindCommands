@@ -1,0 +1,32 @@
+FIND Commands(Field names and values are case sensitive):
+
+db.animals.find({_id:1}) : will return the whole onject
+db.animals.find({_id:1}, {_id: 1}) : will return only that projection
+db.bar.find({_id: {$lt:3}}) : id which is less than 3
+db.bar.find({_id: {$gt:2,$lte:4}}) : id > 2 and <=4
+db.bar.find({_id: {$not :{$gt:2,$lte:4}}}) : negation
+db.bar.find({_id: {$in : [1,4]}}) : In query
+db.bar.find({_id: {$nin : [1,4]}}) : Not In Query
+db.a.find({things: 5}) : to find in the array
+db.a.find({things: 5}, {Name:2}) : find in the array and return the name field
+db.a.find({things: {$all:[5,4]}},{Name:1}) : find object which array has both 5 AND 4
+db.a.find({"info.type": bird,"info.color":pink}) : dot notation can be used for getting documents within documents.
+db.a.find({"info.canFly":{ $exists: true}}) : exists: true will only return those values which has those fields unlike null.
+db.a.find({"info.canFly":{ $exists: false}}) : exists:false will only return those values dont exist
+, is the AND 
+
+Projections
+db.a.find({},{_id:1,things:1}) : 1 means include the field , 0 means exclude those fields in the result set(1 and 0 cannot be in the same projection)
+db.a.find({},{Name:0})
+
+Sorting
+db.a.find({}).sort({things:-1}) : -1: desc, 1: Ascending
+
+Limit()
+db.a.find().limit(3) : to limit the result set to a set of values
+
+Skip:
+db.a.find().skip(1).limit(2) : to skip the documents
+
+FindOne
+db.a.findOne({_id:1}) : finds one document.It doesn't return a cursor
