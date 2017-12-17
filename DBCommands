@@ -1,0 +1,44 @@
+No tables Only Collections.
+Every document should have an _id
+
+Example:
+		db.foo.save({_id:1, x:10})
+		db.foo.find()
+		show collections
+		
+_id can be anything: float/number/string/object. Only restrictions is array.(We can convert an array to byte and store)
+
+db.users.save({Name:'Dash'})
+An id will be created
+ObjectId().getTimestamo() - the auto created id has an inbuilt timestamp.
+
+save() : will overwite data if same id is passed
+insert() : will throw an error if same id is passed
+
+db.users.find().pretty() : will prettify in the json format
+
+update() : It solves the concurrency issue. Atomic in nature
+db.foo.update(query,update,options);
+
+db.a.update({_id:1},{$inc:{x:1}}) : $inc is the increment command
+db.a.update({id:1}, {$set:{y:3}}) : set a field named y to 3
+db.a.update({_id:1},{$unset:{x: 0}}) : to remove or unset a field 
+db.a.update({_id: 1},{$rename: {'namaes': 'Name'}}) : to rename any field
+
+Array operators:
+db.a.update({_id:1},{$push:{things: 'four'}}); : To add to an existing array field
+db.a.update({_id:1}, {$addToSet:{things: 'four'}}) : add only if the value doesnt exist
+db.a.update({_id:1},{$pull: {things: 'four'}}) : pull all the elements that match with the value
+db.a.update({_id:1},{$pop: {things: 1}}): think as a stack.Pops the last element in a array or top of stack
+db.a.update({_id:1},{$pop: {things: -1}}): removes the first element in the array
+
+db.a.update({},{$push:{things: 5}},{multi:true}) : by default the first record is updated.But if all are needed to be updated use: multi:true
+db.a.update({things:9},{$push:{things: 339}}) : find elements which has things array contains 9 and push 339 value to that array
+
+ABove opertaors are only for array , not for other types
+
+Find And Modify: Will fetch one record. If many are matching then sort order can be used.If exact one we can use the query.
+upsert: insert th record if one doesnt exist
+new/old: return old document or new document post the change.
+fields: return what
+sort: -1 = descending , 1= ascending
