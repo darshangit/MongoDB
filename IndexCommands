@@ -1,1 +1,33 @@
 Indexes
+
+Ibndexing Stratergy: Regular(B-tree), Geo(Proximity), Text(parsing text queries and comparing), Hashed(Sharding), TTL(expiring documents)
+
+
+create Index: db.foo.ensureIndex(keys, options)
+			 Key -> which fiels/what order/geo text etc
+			Example:  db.animals.ensureIndex({name:1}) (making name column indexed)
+					   db.records.createIndex( { name: 1 } ) - latest , 1 means sort order
+
+Create index on Multiple tags: db.animals.ensureIndex({tags:1,name:1}) , to check: db.animals.find({tags:1,name:1}).explain()
+					   
+Check Index: db.animals.getIndexes()
+
+Explain Plan: db.animals.find({name:'cat'}).explain()
+
+Drop Index : db.animals.dropIndex("name_1") - name_1 is the index name.
+			You cannot drop _id_ index.
+			
+We can even put an index on Blocl/ Arrays unlike in SQL. - Called as Multikeys
+
+Unique Index: db.animals.ensureIndex({name:1},{unique:true}) - makes the name column as Unique
+
+db.animals.count({"info.color":{$exists:true}}) : check if the info.color exists and count
+
+Be careful using sparse index
+
+To build index in the background: db.animals.ensureIndex({name:1}, {background: true}) : Time consuming
+
+31 fields index are possible
+Index name: 128 chars
+
+To Name indexes:  db.animals.ensureIndex({asdasd:1},{name:'small'})
